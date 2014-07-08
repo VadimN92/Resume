@@ -4,7 +4,7 @@
 	<title>resume</title>
 	<meta name="keywords" content="Резюме, Нагірняк, Nagirniak">
 	<meta charset="utf-8">
-	
+
 	<link type="image/x-icon" href="images/Mario-icon.png" rel="shortcut icon"></link>
 	<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
@@ -21,6 +21,12 @@
 		font-family: 'Lobster', cursive;
 		text-align: center;
 		font-size: 40px;
+		-webkit-transition: background-color 4s;
+		-ms-transition: background-color 4s;
+		-o-transition: background-color 4s;
+		-moz-transition: background-color 4s;
+		transition: background-color 4s;
+
 	}
 	.down_button, .top_button
 	{
@@ -40,11 +46,21 @@
 	{
 		font-family: 'Roboto Slab', serif;
 	}
+	.flying_word 
+	{
+	  position: relative;
+	  right: 0;
+	  -moz-transition: right 9s cubic-bezier(0.0,0.5,0.5,1.0);
+	  -webkit-transition: right 9s cubic-bezier(0.0,0.5,0.5,1.0);
+	  -ms-transition: right 9s cubic-bezier(0.0,0.5,0.5,1.0);
+	  -o-transition: right 9s cubic-bezier(0.0,0.5,0.5,1.0);
+	  transition: right 9s cubic-bezier(0.0,0.5,0.5,1.0);
+	}
 	</style>
 </head>
 <body>
-	<div class="heder1">
-		<h1>Resume</h1>
+	<div class="heder1" onclick="this.style.backgroundColor='white'">
+		<h1 class="flying_word" onclick="this.style.right='450px'">Resume</h1>
 	</div>
 	<div class="down_button">
 		<a name="top"></a>
@@ -101,6 +117,5 @@
 		<a href="#top"><img src="images/Arrows-Up-circular-icon.png"></a>
 		<a name="bottom"></a>
 	</div>
-
 </body>
 </html>
