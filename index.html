@@ -9,6 +9,44 @@
 	<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
 	<style type="text/css">
+	@keyframes animation_of_img
+	{
+		0% {margin-left: 0px; background-color: lime;}
+		50% {margin-left: 0px; background-color: #FF8C00;}
+		100% {margin-left: 0px; background-color: #00FFFF;}
+	}
+	@-moz-keyframes animation_of_img
+	{
+		0% {margin-left: 0px; background-color: lime;}
+		50% {margin-left: 0px; background-color: #FF8C00;}
+		100% {margin-left: 0px; background-color: #00FFFF;}
+	}
+	@-webkit-keyframes animation_of_img
+	{
+		0% {margin-left: 0px; background-color: lime;}
+		50% {margin-left: 0px;background-color: #FF8C00;}
+		100% {margin-left: 0px; background-color: #00FFFF;}
+	}
+
+	@keyframes animation_of_heder
+	{
+		0% {background-color: #A0A0A0;}
+		50% {background-color: white;}
+		100% {background-color: #A0A0A0;}
+	}
+	@-moz-keyframes animation_of_heder
+	{
+		0% {background-color: #A0A0A0;}
+		50% {background-color: white;}
+		100% {background-color: #A0A0A0;}
+	}
+	@-webkit-keyframes animation_of_heder
+	{
+		0% {background-color: #A0A0A0;}
+		50% {background-color: white;}
+		100% {background-color: #A0A0A0;}
+	}
+
 	body
 	{
 		text-align: center;
@@ -21,22 +59,21 @@
 		font-family: 'Lobster', cursive;
 		text-align: center;
 		font-size: 40px;
-		-webkit-transition: background-color 4s;
-		-ms-transition: background-color 4s;
-		-o-transition: background-color 4s;
-		-moz-transition: background-color 4s;
-		transition: background-color 4s;
-
+		animation: animation_of_heder 6s infinite;
 	}
 	.down_button, .top_button
 	{
 		margin: 10px 10px 10px 0;
 		text-align: left;
+		
 	}
 	img
 	{
 		border:7px solid white;
 		border-radius: 20px;
+		animation: animation_of_img 6s infinite;
+		-webkit-animation: animation_of_img 6s infinite;
+		-moz-animation: animation_of_img 6s infinite;
 	}
 	table
 	{
@@ -59,8 +96,8 @@
 	</style>
 </head>
 <body>
-	<div class="heder1" onclick="this.style.backgroundColor='white'">
-		<h1 class="flying_word" onclick="this.style.right='450px'">Resume</h1>
+	<div class="heder1">
+		<h1 class="flying_word" ondblclick="this.style.right='450px'" >Resume</h1>
 	</div>
 	<div class="down_button">
 		<a name="top"></a>
